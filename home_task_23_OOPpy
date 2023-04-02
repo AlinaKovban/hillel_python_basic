@@ -1,0 +1,12 @@
+class String_new(str):
+    
+    def __init__(self, value=''):
+        super().__init__()
+        self.value = str(value)
+    
+    def __add__(self, other):
+        return String_new(self.value + str(other))
+    
+    def __sub__(self, other):
+        return String_new(self.value.replace(str(other), '', 1))
+
